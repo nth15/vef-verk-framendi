@@ -1,0 +1,42 @@
+@import "./config.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html { /* stylelint-disable-line */
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll; // alltaf hafa y skrollbar
+
+  font-family: $font-main;
+  font-size: 16px;
+}
+
+body {
+  background-color: #1c1c1c;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+h1, span, p {
+  color: #ECEFF4;
+}
+
+a, a:hover, a:click, a:visited{
+  border:none;
+  outline:none;
+  text-decoration:none;
+  color:inherit;
+}
+
+img { /* stylelint-disable-line */
+  max-width: 100%;
+}

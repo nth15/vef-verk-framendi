@@ -1,2 +1,8 @@
-# vef-verk-framendi
-Framendi í verkefni í vefforritun 2020
+# Sýnilausn á verkefni 5
+
+Sett upp með `create-react-app`.
+
+```bash
+npm install
+npm start
+```

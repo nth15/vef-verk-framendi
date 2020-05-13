@@ -1,0 +1,32 @@
+$font-main: Lora, "Times New Roman", serif;
+$font-heading: "Roboto Mono", "Courier New", monospace;
+
+a, a:hover, a:click, a:visited{
+  border:none;
+  outline:none;
+  text-decoration:none;
+  color:inherit;
+}
+
+.heading {
+  width: 100%;
+  position: fixed;        
+  background: #161616;
+  padding: 10px 0;
+  top: 0
+}
+
+.heading__container {
+  margin: auto;
+  max-width: 80%;
+  text-decoration: none;
+  align-items: center;
+}
+
+.heading__title {
+  float:left;
+}
+
+.heading__navigation {
+  float: right;
+}
