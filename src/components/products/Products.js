@@ -1,13 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import getProducts from '../../api/api'
 
 
-import Item from '../item/Item';
-
-import './Lecture.scss';
-
-export default class Lecture extends React.Component {
+export default class Products extends React.Component {
 
   state = { data: null, loading: true, error: false }
 
@@ -23,7 +18,6 @@ export default class Lecture extends React.Component {
 
   render() {
     const { data, loading, error } = this.state;
-    const { url } = this.props;
 
     if (loading) {
       return (<div>Sæki gögn...</div>);

@@ -5,7 +5,7 @@ import { getLectureList } from '../../api';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 
-import HomePage from '../../components/home/Home';
+import Products from '../../components/products/Products';
 
 export default class Home extends Component {
 
@@ -19,7 +19,7 @@ export default class Home extends Component {
     return (
       <React.Fragment>
         <Header category="Heim" title="Kaffi Kaffi" />
-        <HomePage/>
+        <Products/>
         <Footer/>
       </React.Fragment>
     );
