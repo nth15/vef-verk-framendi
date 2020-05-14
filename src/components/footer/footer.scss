@@ -2,6 +2,8 @@ $font-main: Lora, "Times New Roman", serif;
 $font-heading: "Roboto Mono", "Courier New", monospace;
 
 .footer {
+  bottom:0;
+  padding-bottom: 2rem;
   margin: auto;
   max-width: 80%;
   text-decoration: none;

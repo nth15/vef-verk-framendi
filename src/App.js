@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from './routes/home/Home';
-import Lecture from './routes/lecture/Lecture';
 import NotFound from './routes/not-found/NotFound';
+import LoginRegister from './routes/loginRegister/LoginRegister';
 
 import './App.scss';
 
@@ -15,7 +15,7 @@ class App extends Component {
         <Helmet defaultTitle="Kaffi Kaffi" titleTemplate="%s – Kaffi Kaffi" />
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/:slug" component={Lecture} />
+          <Route path="/login" exact component={LoginRegister} />
           <Route component={NotFound} />
         </Switch>
       </div>

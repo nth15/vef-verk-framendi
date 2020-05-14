@@ -21,15 +21,11 @@ export default class Header extends React.Component {
     return (
       <header className="heading heading--main" style={style}>
         <div className="heading__container">
-          <h1 className="heading__title">{title}</h1>
+          <h1 className="heading__title">
+            <Link className="nav__button" to="/">{title}</Link></h1>
           <div className="heading__navigation">
             <div className="heading__nav_button"> 
-              <Link className="nav__button" to="/">Heim</Link>
-            </div>
-            <div className="heading__nav_button">
-              <Link className="nav__button" to="/">Matseðill</Link>
-            </div><div className="heading__nav_button">
-              <Link className="nav__button" to="/">Um okkur</Link>
+              <Link className="nav__button" to="/login">Skrá inn</Link>
             </div>
             <div className="heading__nav_button">
               <Link className="nav__button" to="/">Karfa</Link>

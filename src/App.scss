@@ -26,7 +26,7 @@ body {
   padding-bottom: 40px;
 }
 
-h1, span, p {
+h1, h2, span, p {
   color: #ECEFF4;
 }
 
@@ -35,8 +35,4 @@ a, a:hover, a:click, a:visited{
   outline:none;
   text-decoration:none;
   color:inherit;
-}
-
-img { /* stylelint-disable-line */
-  max-width: 100%;
 }
