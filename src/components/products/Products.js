@@ -38,7 +38,7 @@ export default class Products extends React.Component {
           <div className="products__row">
             <div className="products__col">
               {data.map(product => (
-                <div classname="productItem" key={product.title}>
+                <div className="productItem" key={product.title}>
                   <div><h2>{product.title}</h2></div>
                   <div><p>{product.description}</p></div>
                   <div className="product__price"><p>{product.price} kr.</p></div>

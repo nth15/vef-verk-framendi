@@ -1,19 +1,7 @@
 const baseurl = 'https://vefforritun-verk-bak.herokuapp.com/'; 
 
-async function get(path) {
-  return request('GET', path);
-}
-
 async function post(path, data) {
   return request('POST', path, data);
-}
-
-async function patch(path, data) {
-  return request('PATCH', path, data);
-}
-
-async function deleteMethod(path) {
-  return request('DELETE', path);
 }
 
 async function request(method, path, data) {
