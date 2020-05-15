@@ -38,6 +38,7 @@ export default class Login extends React.Component {
         localStorage.setItem('username', res.data.user.username);
         localStorage.setItem('cart', JSON.stringify([]));
         alert('Þú ert skráður inn!');
+        window.location.reload(false);
         return;
       }
       alert('Innskráning mistókst');
