@@ -5,6 +5,7 @@ import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 
 import Login from '../../components/login/Login';
+import Register from '../../components/register/Register';
 
 export default class Home extends Component {
 
@@ -16,6 +17,7 @@ export default class Home extends Component {
       <React.Fragment>
         <Header category="Heim" title="Kaffi Kaffi" />
         <Login/>
+        <Register/>
         <Footer/>
       </React.Fragment>
     );

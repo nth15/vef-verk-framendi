@@ -1,5 +1,5 @@
 import React from 'react';
-import { getProducts } from '../../api/api'
+import { getProducts, addToCart } from '../../api/api'
 
 import './Products.scss';
 
@@ -17,6 +17,11 @@ export default class Products extends React.Component {
     }
   }
 
+  
+  handleClick() {
+    console.log('this is:', this);
+  }
+
   render() {
     const { data, loading, error } = this.state;
 
@@ -27,7 +32,7 @@ export default class Products extends React.Component {
       return (<div>Villa við að sækja gögn</div>);
     }
 
-    data.forEach(item => console.log(item));
+
     return (
       <div className="products">
           <div className="products__row">
@@ -37,6 +42,9 @@ export default class Products extends React.Component {
                   <div><h2>{product.title}</h2></div>
                   <div><p>{product.description}</p></div>
                   <div className="product__price"><p>{product.price} kr.</p></div>
+                  <div className="product__button">
+                    <button onClick={this.handleClick}>Bæta við körfu</button>
+                  </div>
                 </div>
               ))}
             </div>

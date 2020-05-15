@@ -12,7 +12,15 @@ export default class Header extends React.Component {
     image: PropTypes.string,
   }
 
+  onLogout = (e) => {
+    localStorage.clear();
+    window.location.reload(false);
+  }
+
   render() {
+
+    const username = localStorage.getItem('username');
+
     const { title } = this.props;
 
     const style = {};
@@ -22,7 +30,7 @@ export default class Header extends React.Component {
       <header className="heading heading--main" style={style}>
         <div className="heading__container">
           <h1 className="heading__title">
-            <Link className="nav__button" to="/">{title}</Link></h1>
+            <Link className="nav__button" to="/">{title} </Link></h1>
           <div className="heading__navigation">
             <div className="heading__nav_button"> 
               <Link className="nav__button" to="/login">Skrá inn</Link>
@@ -30,6 +38,10 @@ export default class Header extends React.Component {
             <div className="heading__nav_button">
               <Link className="nav__button" to="/">Karfa</Link>
             </div>
+            <div className="heading__nav_button">
+            <button onClick={this.onLogout}>Skrá út</button>
+            </div>
+            <p>Velkominn {username}</p>
           </div>
         </div>
       </header>

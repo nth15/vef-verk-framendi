@@ -1,18 +1,17 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom'
+
+import { register } from '../../api/api'
 
 import Input from '../input/Input';
 
-import './Login.scss';
+import './Register.scss';
 
-import { login } from '../../api/api'
-
-
-export default class Login extends React.Component {
+export default class Register extends React.Component {
 
   state = { 
     user: '',
-    password: '' ,
+    email: '',
+    password: '' 
   }
 
   onUserChange = (e) => {
@@ -20,36 +19,40 @@ export default class Login extends React.Component {
     this.setState({ user: e.target.value });
   }
 
+  onEmailChange = (e) => {
+    const { email } = e.target;
+    this.setState({ email: e.target.value });
+  }
+
   onPasswordChange = (e) => {
     const { password } = e.target;
     this.setState({ password: e.target.value });  
   }
 
-
+  
   onSubmit = (e) => {
     e.preventDefault();
     
     (async () => {
-      const res = await login(this.state.user, this.state.password);
+      const res = await register(this.state.user, this.state.email, this.state.password);
       console.log(res);
       console.log(res.data);
       if (res.status >= 200 && res.status < 300) {
         localStorage.setItem('token,', res.data.token);
-        localStorage.setItem('username', res.data.user.username);
+        localStorage.setItem('user', res.data.user);
         localStorage.setItem('cart', JSON.stringify([]));
-        alert('Þú ert skráður inn!');
+        alert('Þú ert skráður til hamingju');
         return;
       }
-      alert('Innskráning mistókst');
+      alert('Skráning mistókst.');
     })()
 
   }
-
   render() {
-   return (
-      <div className="login">
-        <div className="login__row">
-          <div className="login__col">
+    return (
+      <div className="register">
+        <div className="register__row">
+          <div className="register__col">
             <form onSubmit={this.onSubmit}>
               <Input 
               label={"Notendanafn"} 
@@ -57,13 +60,21 @@ export default class Login extends React.Component {
               value={this.state.user}  
               onChange={this.onUserChange} 
               />
+
+              <Input 
+              label={"Tölvupóstur"} 
+              type={"email"} 
+              value={this.state.email}  
+              onChange={this.onEmailChange} 
+              />
+
               <Input 
               label={"Lykilorð"} 
               type={"password"} 
               value={this.state.password}  
               onChange={this.onPasswordChange} 
               />
-              <button onClick={this.onSubmit} className="login__button">Innskráning</button>
+              <button onClick={this.onSubmit} className="register__button">Skráning</button>
             </form>
           </div>
         </div>

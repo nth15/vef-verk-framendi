@@ -1,0 +1,27 @@
+@import "../../config.scss";
+
+.register {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  &__row {
+    @include row;
+    margin-bottom: $gutter * 2;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    @include columns(6);
+
+    margin-bottom: $gutter * 2;
+  }
+
+  &__error {
+    @include columns(12);
+  }
+}
+
+
+label {
+  color: #ECEFF4;
+}

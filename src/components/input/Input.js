@@ -8,7 +8,10 @@ export default class Input extends React.Component {
       <div className="input">
       <label> 
         {this.props.label}
-        <input type={this.props.type} onChange={this.props.onChange} />
+        <input 
+        type={this.props.type} 
+        onChange={this.props.onChange} 
+        />
       </label>
       </div>
     );

@@ -1,12 +1,6 @@
 $font-main: Lora, "Times New Roman", serif;
 $font-heading: "Roboto Mono", "Courier New", monospace;
 
-a, a:hover, a:click, a:visited{
-  border:none;
-  outline:none;
-  text-decoration:none;
-  color:inherit;
-}
 
 .heading {
   width: 100%;
@@ -25,8 +19,27 @@ a, a:hover, a:click, a:visited{
 
 .heading__title {
   float:left;
+  color: #ECEFF4;
 }
 
 .heading__navigation {
   float: right;
+}
+
+a{
+  font-family: "Roboto Mono";
+  border:none;
+  outline:none;
+  text-decoration:none;
+  color: #ECEFF4;
+}
+
+.heading__nav_button > button {
+  background: #161616;
+  font-family: "Roboto Mono";
+  border: none;
+  outline:none;
+  text-decoration:none;
+  color: #ECEFF4;
+  cursor: pointer;
 }
